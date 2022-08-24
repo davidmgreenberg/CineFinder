@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/6d20af9d4c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="movie__nav">
+        <span class="nav__logo--title">Cine<span class="orange">Finder</span></span>
+        <div class="nav__right">
+        <ul class="nav__list">
+            <li class="nav__list--item"><a class = "nav__list--link link__hover-effect" href="./index.html">Home</a></li>
+        </ul>
+        <div class="nav__contact--btn"><i class="fa-solid fa-address-book click"><span class="address-book__text">Contact</span></i></div>
+    </div>
+    </nav>
+    <section class="search__movie">
+       <div class="search__banner">
+        <form id="input__wrapper" onclick="search(event)">
+            <input class="movie__input"type="text" placeholder="Search a Movie, Keyword, or Year" required>
+            <button class="search__btn click"><i class="fa-solid fa-magnifying-glass search__glass"></i></button>
+        </form>
+       </div>
+    </section>
+    <section id="poulate__movies">
+        <div class="container">
+            <div class="row row__movies">
+                <div class="movies__list">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

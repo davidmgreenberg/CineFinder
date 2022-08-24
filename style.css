@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.orange {
+    color:#d18708;
+}
+
+.container {
+    padding: 48px 0;
+    width:100%;
+}
+h1 {
+    font-size:42px;
+    font-weight:700;
+}
+
+h2 {
+    font-size:36px;
+    font-weight: 500;
+}
+
+.click {
+    transition:all 300ms ease;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+.click:hover {
+    transform:scale(1.05);
+}
+
+.click:active {
+    transform:scale(.95);
+}
+
+.row {
+    max-width:1200px;
+    margin:0 auto;
+    width:100%;
+}
+
+/* CONTACT BTN BOTTOM RIGHT  */
+
+.fa-address-book {
+    font-size:40px;
+    color:white;
+    position: relative;
+    background-color:#242424;
+    border-radius: 50%;
+    padding:24px;
+    z-index: 100;
+}
+
+.address-book__text {
+    left:12px;
+    position: absolute;
+    bottom:-28px;
+    transition: all 300ms ease;
+    font-size:20px;
+    color:white;
+    transform: scale(0);
+    z-index: 100;
+    
+
+}
+
+.fa-address-book:hover .address-book__text {
+ transform: scale(1);
+ color: #242424;
+}
+
+/* NAV SECTION  */
+
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav {
+display: flex;
+justify-content: space-evenly;
+padding:48px;
+align-items: center;
+max-width:1200px;
+
+}
+
+
+.link__hover-effect {
+position: relative;
+cursor:pointer;
+}
+
+.link__hover-effect:after {
+    content:"";
+    bottom: -3px;
+    right:0;
+    height:3px;
+    width:0;
+    position: absolute;
+    background-color: #242424;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect:hover:after {
+    left:0;
+    width: 100%;
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+}
+
+
+.fa-magnifying-glass {
+font-size:100px;
+display: flex;
+align-items: center;
+justify-content: center;
+animation: magnify 10s infinite 1000ms ease-in-out ;
+color:#242424;
+
+
+}
+
+.fa-clapperboard {
+    position:absolute;
+    transform: scale(0);
+    opacity: 0;
+    font-size:36px;
+    left:20px;
+    bottom:44px;
+    animation: movieClapper 10s infinite 1000ms ease-in-out ;
+    color:#242424;
+}
+
+@keyframes magnify{
+    0% {
+        transform: scale(1);
+     
+    }
+   
+    20% {
+        transform:scale(1.5) 
+        
+    }
+    100% {
+        transform: scale(1.5) 
+    }
+}
+
+@keyframes movieClapper {
+    0% {
+        transform:scale(0);
+        opacity: 0;
+    }
+
+    20% {
+        transform:scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.nav__logo--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__logo--title {
+font-size:64px;
+margin-left:12px;
+font-weight:700;
+}
+.movie__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: none;
+}
+.nav__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav__list {
+    display: flex;
+
+}
+
+.nav__list--item {
+    margin-right: 28px;
+
+}
+
+.nav__contact {
+    margin-right: 0;
+}
+
+.nav__list--link {
+    color:#242424;
+    font-size:24px;
+    font-weight:500;
+}
+
+.nav__list--link:active {
+color:#d18708;
+}
+
+/* GET STARTED */
+
+.get__started--btn {
+    height:20vh;
+    width:100%;
+    border-radius:100px;
+    max-width:60vw;
+    border:.5px solid #242424;
+    box-shadow: 2px 2px 2px 0 #242424;
+    position: relative;
+    background-color: transparent;
+    opacity:1;
+}
+
+.start__link {
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get__started--btn:before {
+    content:"";
+    background-image: url(./Assets/moviecollagec.webp);
+    background-size: 100%;
+    filter: grayscale(65%);
+    filter:brightness(40%);
+    position: absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+    border-radius:100px;
+    border:none;
+    
+}
+
+.row__get--started {
+    padding: 48px 48px 48px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height:70vh;
+}
+
+
+.intro__header {
+    max-width:700px;
+    text-align: center;
+    margin-bottom:28px;
+}
+
+.intro__sub-header {
+    text-align: center;
+    max-width: 650px;
+    margin-bottom:42px;
+    color:#d18708;
+    font-size:24px;
+    opacity:90%;
+}
+
+
+.get__started--btn--text {
+    opacity: 1;
+    position: relative;
+    color:white;
+    font-size:52px;
+    font-weight:700;
+
+}
+
+.get__started--btn:active .get__started--btn--text  {
+    color:#d18708;
+}
+
+/* MOVIES  */
+
+#movies {
+margin-top:25vh;
+}
+
+
+.search__glass {
+    animation: none;
+    font-size:60px;
+    color:white;
+}
+
+.search__banner {
+    width: 100%;
+    height: 20vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding:32px;
+
+}
+
+.search__banner:before {
+    content:"";
+    background-image: url(./Assets/moviecollagec.webp);
+    background-size: 100%;
+    filter: grayscale(65%);
+    filter:brightness(40%);
+    position: absolute;
+    top:0px;
+    right:0px;
+    left:0px;
+    bottom:0px;
+}
+#input__wrapper{ 
+    height:100%;
+    width:80%;
+    display: flex;
+
+}
+.movie__input {
+    background-color: white;
+    z-index:100;
+    width:70%;
+    height:100%;
+    margin-right:20px;
+    font-size:32px;
+    padding-left: 10px;
+}
+
+.search__btn {
+    height:100%;
+    width:20%;
+    background-color:#d18708;
+    z-index:100;
+    border-radius:100px;
+    border:0px;
+    box-shadow: 7px 7px 14px #24242452;
+   
+}
+
+.row__movies {
+    padding:0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movies__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie__wrapper {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin:20px;
+}
+
+.movie__header {
+    font-size:18px;
+    margin-bottom:8px;
+    color: #242424;
+    text-align: center;
+    letter-spacing:-1px;
+}
+
+.movie__year {
+    font-size:28px;
+    margin-top:4px;
+    color:#d18708;
+    -webkit-text-stroke: .5px #030000af;
+}
+
+.movie__poster {
+width: 100%;
+height: 100%;
+height:250px;
+width:160px;
+}
+
