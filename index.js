@@ -28,5 +28,5 @@ function movieHTML(movie) {
 }
 
 function search(event) {
-    console.log("Hello!")
+    console.log("Hello!!")
 }
